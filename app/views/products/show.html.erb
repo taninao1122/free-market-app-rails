@@ -1,2 +1,8 @@
-<h1><%= @product.name %></h1>
-<p><%= number_to_currency(@product.price) %></p>
+<h1>商品一覧画面</h1>
+
+<% @products.each do |product| %>
+  <div>
+    <%= link_to product.name, product %>
+    <span><%= number_to_currency(product.price) %></span>
+  </div>
+<% end %>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'products' => "products#index" #TODO
-  # get 'products/show'#TODO
+  get 'products' => "products#show" #TODO
+  get 'sell' => "products#sell"
 
   root 'home#top' 
   get 'home/top' => "home#top"
