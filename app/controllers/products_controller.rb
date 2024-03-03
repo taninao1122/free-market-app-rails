@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController
-  def show
+  def index
     @products = Product.all
   end
-
+  
   def register
     # 登録作成用
   end
@@ -10,16 +10,21 @@ class ProductsController < ApplicationController
   def create
     # 登録用
     product = Product.new(name:  params['name'], price: params['price'])
-    product.save
-    redirect_to('/home/top')
+    if product.save
+      redirect_to('/home/top')
+    else
+      render("products/sell")
+    end
   end
   
   def update
     # 登録更新用
   end
 
-  def delete
-    # 削除用
+  def destory
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to products_path, notice: "削除しました。"
   end
 
 
