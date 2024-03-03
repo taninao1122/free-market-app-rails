@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   post 'products/:id/delete' => "products#destory"
   
+  get 'profile/edit' => "user#edit"
   get 'products' => "products#index"
   get 'sell' => "products#sell" # 出品画面表示
   get 'profile' => "user#profile" # マイプロフィール表示

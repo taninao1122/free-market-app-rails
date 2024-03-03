@@ -1,0 +1,23 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    /* 画面全体の高さに合わせる */
+}
+
+.profile-content {
+    text-align: center;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* 丸い形にする */
+    margin-bottom: 20px;
+}
+
+.edit-profile-link {
+    color: #007bff;
+    /* リンクの色を変更 */
+}
