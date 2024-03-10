@@ -7,9 +7,4 @@ class UserController < ApplicationController
     @user = User.new()
   end
 
-  def login
-  end
-  
-  def logout
-  end
 end
