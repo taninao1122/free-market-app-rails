@@ -13,3 +13,15 @@
     text-decoration: none;
     /* リンクの下線を削除する */
 }
+
+.field {
+    margin-bottom: 15px;
+    /* フィールドごとの余白を追加 */
+}
+
+.field label {
+    display: block;
+    /* ラベルをブロック要素に変更し、新しい行に配置 */
+    /* margin-bottom: 5px; */
+    /* ラベルと入力欄の間に余白を追加 */
+}
