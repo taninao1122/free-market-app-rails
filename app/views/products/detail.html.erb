@@ -1,1 +1,16 @@
-<h1>商品詳細</h1>
+<div class="products-detail">
+    <table>
+        <tr>
+            <td>画像</td>
+        </tr>
+        <tr>
+            <td><h2><%= @product.name %></h2></td>
+        </tr>
+        <tr>
+            <td><p><%= "￥ #{@product.price.to_i}" %></p></td>
+        </tr>
+        <tr>
+            <td>詳細</td>
+        </tr>        
+    </table>
+</div>

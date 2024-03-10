@@ -1,0 +1,15 @@
+.product-block {
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 5px 60px;
+    text-align: center;
+    display: inline-block;
+    /* 必要に応じて追加 */
+}
+
+.product-block a {
+    color: inherit;
+    /* リンクのデフォルトの色を継承する */
+    text-decoration: none;
+    /* リンクの下線を削除する */
+}

@@ -1,11 +1,18 @@
 <h1>商品一覧画面</h1>
 <div class="container">
+  <table>
     <% @products.each do |product| %>
-      <div class="product-block">
-          <h5 class="product-name"><%= product.name %></h5>
-          <p><%= product.price %></p>
-          <p><%= product.id %></p>
-          <%= link_to "削除", "/products/#{product.id}/delete", data: { turbo_method: :post } %>
-      </div>
+      <tr>
+        <td>
+          <%= link_to("/products/#{product.id}/detail") do %>
+            <div class="product-block">
+              <h2><%= product.name %></h2>
+              <p><%= "￥ #{product.price.to_i}" %></p>
+              <%= link_to("削除", "/products/#{product.id}/delete", data: { turbo_method: :post }) %>
+            </div>
+          <% end %>
+        </td>
+      </tr>
     <% end %>
+  </table>
 </div>
