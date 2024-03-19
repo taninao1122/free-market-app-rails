@@ -1,6 +1,6 @@
 <div class="profile-container">
   <div class="profile-content">
-    <%= image_tag('default_profile.png', class: 'profile-image', alt: 'Profile Image') %>
+    <%= image_tag("profile/#{@current_user.profile_image}", class: 'profile-image', alt: 'Profile Image') %>
     <h2><%= @current_user.name %></h2>
     <%= link_to "プロフィールを編集", "/profile/#{@current_user.id.to_i}/edit" %>
   </div>
