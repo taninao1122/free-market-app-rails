@@ -25,3 +25,8 @@
     /* margin-bottom: 5px; */
     /* ラベルと入力欄の間に余白を追加 */
 }
+
+.product-index-image {
+    width: 300px;
+    height: 300px;
+}

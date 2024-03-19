@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post 'products/:id/delete' => "products#destory"
 
   get 'profile/:id' => "user#profile" # マイプロフィール表示
-  get 'profile/edit' => "user#edit"
+  get 'profile/:id/edit' => "user#edit"
 
   # リソースを使ってルーティングを変更する
   get 'sell' => "products#sell" # 出品画面表示
