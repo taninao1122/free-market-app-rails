@@ -12,7 +12,7 @@ class UserController < ApplicationController
     if params[:image]
       image = params[:image]
       user.profile_image = "#{user.id}.png"
-      File.binwrite("public/profile/#{user.profile_image}", image.read)
+      File.binwrite("images/profile/#{user.profile_image}", image.read)
     else
       user.profile_image = "default.png"
     end
