@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
       image = params[:image]
       File.binwrite("public/products/#{product.image}", image.read)
     else
-      product.image = "defalut.png"
+      product.image = "default.png"
     end
 
     if product.save
@@ -46,6 +46,7 @@ class ProductsController < ApplicationController
   def destory
     @product = Product.find(params[:id])
     @product.destroy
+    #TODO 画像ファイルも削除
     redirect_to products_path, notice: "削除しました。"
   end
 

@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       user = User.find_by(email: params[:email], password: params[:password])
       if user.nil?
         flash.now[:notice] = "EmailまたはPasswordの値が不正です"
-        render("sessions#new")
+        render "sessions#new"
       else
         session[:user_id] = user.id
         flash[:notice] = "ログインに成功しました"

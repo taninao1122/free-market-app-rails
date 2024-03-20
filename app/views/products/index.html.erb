@@ -9,11 +9,10 @@
               <% if product.image.present? %>
                 <%= image_tag("/products/#{product.image}", class: "product-index-image") %>
               <% else %>
-                <%= image_tag("/products/defalut.png", class: "product-index-image") %>
+                <%= image_tag("/products/default.png", class: "product-index-image") %>
               <% end %>
               <h2><%= product.name %></h2>
               <p><%= "￥ #{product.price.to_i}" %></p>
-              <%= link_to("削除", "/products/#{product.id}/delete", data: { turbo_method: :post }) %>
             </div>
           <% end %>
         </td>

@@ -13,6 +13,9 @@
         </tr>
         <tr>
             <td><p><%= @product.description %></p></td>
-        </tr>        
+        </tr>
+        <tr>
+            <td><%= link_to("削除", "/products/#{@product.id}/delete", data: { turbo_method: :post }) %></td>
+        </tr>
     </table>
 </div>
