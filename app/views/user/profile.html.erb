@@ -1,7 +1,29 @@
 <div class="profile-container">
   <div class="profile-content">
-    <%= image_tag("profile/#{@current_user.profile_image}", class: 'profile-image', alt: 'Profile Image') %>
+    <%= image_tag("/profiles/#{@current_user.profile_image}", class: 'profile-image', alt: 'Profile Image') %>
     <h2><%= @current_user.name %></h2>
     <%= link_to "プロフィールを編集", "/profile/#{@current_user.id.to_i}/edit" %>
   </div>
+</div>
+<div class="profile-my-product">
+  <table>
+    <th>出品商品一覧</th>
+    <% @products.each do |product| %>
+      <tr>
+        <td>
+          <%= link_to("/products/#{product.id}/detail") do %>
+            <div class="product-block">
+              <% if product.image.present? %>
+                <%= image_tag("/products/#{product.image}", class: "product-index-image") %>
+              <% else %>
+                <%= image_tag("/products/default.png", class: "product-index-image") %>
+              <% end %>
+              <h2><%= product.name %></h2>
+              <p><%= "￥ #{product.price.to_i}" %></p>
+            </div>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
 </div>

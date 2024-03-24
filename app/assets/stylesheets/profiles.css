@@ -1,7 +1,7 @@
 .profile-container {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 30vh;
     /* 画面全体の高さに合わせる */
 }
 
@@ -20,4 +20,9 @@
 .edit-profile-link {
     color: #007bff;
     /* リンクの色を変更 */
+}
+
+.profile-my-product {
+    display: flex;
+    justify-content: center;
 }
