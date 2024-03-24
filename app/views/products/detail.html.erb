@@ -15,7 +15,11 @@
             <td><p><%= @product.description %></p></td>
         </tr>
         <tr>
-            <td><%= link_to("削除", "/products/#{@product.id}/delete", data: { turbo_method: :post }) %></td>
+            <% if @current_user.id == @product.user_id %>
+                <td><%= link_to("出品を取りやめる", "/products/#{@product.id}/delete", data: { turbo_method: :post }) %></td>
+            <% else %>
+                <td>購入する</td>
+            <% end %>
         </tr>
     </table>
 </div>
