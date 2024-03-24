@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  #TODO before_actionの記載
   def index
     @products = Product.all
   end
@@ -18,7 +19,10 @@ class ProductsController < ApplicationController
 
   def create
     # 登録用
-    product = Product.new(name:  params['name'], price: params['price'], description: params['description'])
+    product = Product.new(name:  params['name'], 
+                          price: params['price'], 
+                          description: params['description'], 
+                          user_id: current_user.id)
 
     if params[:image]
       extension = File.extname(params[:image].original_filename)
